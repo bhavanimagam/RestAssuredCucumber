@@ -59,5 +59,48 @@
         </dependency>
 
     </dependencies>
-
+    <profiles>
+    <profile>
+        <id>ci-tests</id>
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>2.22.2</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>verify</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+<!--                        <runOrder>alphabetical</runOrder>-->
+<!--                        <forkCount>4</forkCount>-->
+                        <excludes>
+                            <exclude>**/*blahTestRunner*.java</exclude>
+                        </excludes>
+                        <includes>
+                            <include>**/*TestRunner*.java</include>
+                        </includes>
+<!--                        <systemProperties>-->
+<!--                            <property>-->
+<!--                                <name>env</name>-->
+<!--                                <value>ci</value>-->
+<!--                            </property>-->
+<!--                        </systemProperties>-->
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.surefire</groupId>
+                            <artifactId>surefire-junit47</artifactId>
+                            <version>3.0.0-M3</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+            </plugins>
+        </build>
+    </profile>
+    </profiles>
 </project>

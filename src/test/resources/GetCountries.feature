@@ -3,6 +3,7 @@ Given I have API headers
 When I get countries
 Then I verify that list countries is availbale in response
 
+  @bhavani4
   Scenario: When I get countries , I verify that vietnam exists in the response
     Given I have API headers
       | x-rapidapi-host | restcountries-v1.p.rapidapi.com                    |

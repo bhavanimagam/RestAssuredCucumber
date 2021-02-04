@@ -77,7 +77,7 @@
                     </executions>
                     <configuration>
 <!--                        <runOrder>alphabetical</runOrder>-->
-<!--                        <forkCount>4</forkCount>-->
+                        <forkCount>4</forkCount>
                         <excludes>
                             <exclude>**/*blahTestRunner*.java</exclude>
                         </excludes>

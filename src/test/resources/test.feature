@@ -9,7 +9,7 @@ I would like to calculate sum of 2 numbers
     @bhavani1
     Examples:
       | a  | b  | sum |
-      | 5  | 10 | 15  |
+      | 5  | 10 | 20  |
       | 10 | 25 | 35  |
       | 5  | 6  | 11  |
     @bhavani2

@@ -10,6 +10,6 @@ import org.junit.runner.RunWith;
                  glue = "com.companyname.projectname.steps",
                  tags="@bhavani3",
                  plugin = {"pretty", "junit:target/test-runner3-results.xml",
-                         "json:target/test-runner3-cucumber-reports.json", "html:target/TestRunner3"})
+                         "json:target/test-runner3-cucumber-reports.json", "html:target/TestRunner3.html"})
 public class TestRunner3 {
 }

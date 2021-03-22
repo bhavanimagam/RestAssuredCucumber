@@ -34,7 +34,6 @@ public class GetCountriesSteps {
     public void iGetCountries() {
        Response response= RestAssuredUtil.sendGETRequest(HOST,PATH,getCOuntriesTestContext.getHeaders());
        getCOuntriesTestContext.setHttpResponse(response);
-        System.out.println("response "+response.prettyPrint());
     }
 
     @Then("I verify (.*) exists in the response$")

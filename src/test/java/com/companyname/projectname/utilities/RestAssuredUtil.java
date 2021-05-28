@@ -9,7 +9,6 @@ import io.restassured.response.Response;
 public class RestAssuredUtil {
 
     public static Response sendGETRequest(String host, String path, Map<String,String> headers){
-
        return  given().baseUri(host).basePath(path).filters(LoggingUtil.getLoggingFilters()).headers(headers).get().then().extract().response();
     }
 }

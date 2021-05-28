@@ -84,12 +84,12 @@
                         <includes>
                             <include>**/*TestRunner*.java</include>
                         </includes>
-<!--                        <systemProperties>-->
-<!--                            <property>-->
-<!--                                <name>env</name>-->
-<!--                                <value>ci</value>-->
-<!--                            </property>-->
-<!--                        </systemProperties>-->
+                        <systemProperties>
+                            <property>
+                                <name>env</name>
+                                <value>integration</value>
+                            </property>
+                        </systemProperties>
                     </configuration>
                     <dependencies>
                         <dependency>

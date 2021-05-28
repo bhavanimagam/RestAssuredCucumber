@@ -9,6 +9,8 @@ import javax.swing.text.html.Option;
 
 import com.companyname.projectname.utilities.Country;
 import com.companyname.projectname.utilities.GetCOuntriesTestContext;
+import com.companyname.projectname.utilities.LoadTestProperties;
+import com.companyname.projectname.utilities.PropertyKeys;
 import com.companyname.projectname.utilities.RestAssuredUtil;
 import com.google.inject.Inject;
 import io.cucumber.datatable.DataTable;
@@ -21,7 +23,7 @@ public class GetCountriesSteps {
     @Inject
     private GetCOuntriesTestContext getCOuntriesTestContext;
 
-    private static final String HOST="https://restcountries-v1.p.rapidapi.com";
+    private static final String HOST= LoadTestProperties.getProperty(PropertyKeys.HOST.getKey());
     private static  final String PATH="/all";
 
     @Given("I have API headers")
@@ -32,6 +34,7 @@ public class GetCountriesSteps {
 
     @When("I get countries")
     public void iGetCountries() {
+        System.out.println("HOST "+HOST);
        Response response= RestAssuredUtil.sendGETRequest(HOST,PATH,getCOuntriesTestContext.getHeaders());
        getCOuntriesTestContext.setHttpResponse(response);
     }
